@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 60rem;
+    margin: auto;
+    padding: 1rem;
+    color: #17212b;
+    background: #fff;
+}
+
+a {
+    color: #0645ad;
+}
+
+nav a {
+    margin-right: 1rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+input,
+button {
+    font: inherit;
+    padding: .5rem;
+    max-width: 100%;
+}
+
+button {
+    display: block;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #657180;
+    padding: .5rem;
+    text-align: left;
+}
+
+:focus-visible {
+    outline: 3px solid #7a2900;
+    outline-offset: 3px;
+}
