@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+    {% extends "base.html" %} 
+    {% block content %} 
+
+    <h1>Registrer kunde</h1>
+
+    <form action="{{ url_for('lagre_kunde') }}" method="POST">
+        <label for="navn"> Navn (obligatorisk) </label>
+        <input id="navn" name="navn" maxlength="100" autocomplete="name" required>
+
+        <label for="epost">E-post (obligatorisk) </label>
+        <input id="epost" name="epost" type="email" maxlength="150" autocomplete="email" required>
+
+        <label for="telefon">Telefon</label>
+        <input id="telefon" name="telefon" type="tel" maxlength="20" autocomplete="tel">
+
+        <button type="submit">Lagre kunde</button>
+    </form> 
+
+    {% endblock %}
+    
+</body>
+
+</html>

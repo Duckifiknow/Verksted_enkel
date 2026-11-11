@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
+
 <body>
+
     <a href="#innhold">Hopp til hovedinnhold</a>
+
+    <form action="{{ url_for('kunder') }}" method="GET">
+        <label for="sok">Søk etter kundenavn</label>
+        <input id="sok" name="sok" type="search">
+        <button type="submit">Søk</button>
+    </form>
+
+    <p><a href="{{ url_for('kunder') }}">Vis alle kunder</a></p>
+
     <nav aria-label="Hovedmeny">
         <a href="{{url_for('kunder')}}">Kundeliste</a>
+        <a href="{{url_for('ny_kunde')}}">Registrer kunde</a>
     </nav>
+
     <main id="innhold" tabindex="-1">
         {% block content %}{% endblock %}
     </main>
+    
 </body>
+
 </html>

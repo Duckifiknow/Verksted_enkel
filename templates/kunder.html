@@ -9,9 +9,12 @@
 </head>
 
 <body>
+
     {% extends "base.html" %}
     {% block content %}
+
     <h1>Kunder i verkstedet</h1>
+
     <table>
         <caption>Registrerte kunder</caption>
         <thead>
@@ -29,7 +32,9 @@
                 <td>{{ kunde.telefon }}</td>
             </tr> {% endfor %} </tbody>
     </table>
+
     {% endblock %}
+    
 </body>
 
 </html>
